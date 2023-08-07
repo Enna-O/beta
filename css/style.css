@@ -1,0 +1,370 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    
+    overflow-x: hidden;
+}
+
+:root{
+    --majorBlue:#01bafd;
+    --anotherBlue:#3fb6e1;
+    --mainRed:#df7263;
+
+}
+
+.my-header-container{
+    background-color: rgba(248, 244, 244, 0.349);
+    border-bottom: 0.3px solid rgb(236, 236, 236);
+}
+
+.my-header-top-left{
+    display:flex;
+}
+.my-header-top-left div{
+    margin:10px 20px;
+}
+@media screen and (max-width:991px) {
+    .vertical-line, .header-phone{
+        display: none;
+    }
+}
+.vertical-line{
+    border-left: 1px solid black;
+    height:20px;
+}
+
+.header-top-right ul{
+    display:flex;
+    float: right;
+    margin-right:15%;
+    margin-top: 10px;
+    list-style-type: none;
+}
+
+.header-top-right ul a{
+    margin:10px;
+    color:black;
+}
+.header-top-right ul a:hover{
+    color:var(--majorBlue);
+    transition: ease-in-out 5000;
+}
+@media screen and (max-width:576px) {
+    .carousel-inner img{
+        height:300px;
+    }
+}
+@media screen and (max-width:991px) {
+    .header-top-right{
+        margin-right:0;
+    }
+    .header-top-right ul a{
+        margin:4px;
+        margin-top:2px
+    }
+}
+
+/*PRIMARY NAVIGATION*/
+.logo-mcls{
+    font-size: 26px;
+    font-family: cursive;
+    margin-top: 20px;
+}
+.nav-item .nav-link{
+    font-size: 20px;
+    font-weight: bold;
+}
+.carousel-inner img{
+    opacity: 0.8;
+}
+.carousel-caption{
+    position: absolute;
+    z-index: 10;
+    display: table;
+    
+    height:100%;
+    top:30%;
+    text-align: center;
+    
+}
+.carousel-caption h1{
+    font-size: 3.5vw;
+    font-weight: bold;
+    color:white;
+    font-weight: bold;
+}
+.carousel-caption p{
+    font-size: 2vw;
+}
+.carousel-container{
+    position: relative;
+}
+.carousel-caption button{
+    border:none;
+    padding:12px;
+    border-radius: 8px;
+}
+.beta{
+    color: #01bafd;
+}
+
+/*HAMBURGER STYLE*/
+
+.navbar-toggler{
+    width:20px;
+    height:20px;
+    position:relative;
+    transition: 0.5s ease-in-out;
+}
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus{
+    outline:none;
+    box-shadow: none;
+    border:0;
+}
+.navbar-toggler span{
+    margin:0;
+    padding:0;
+}
+.toggler-icon{
+    display:block;
+    position:absolute;
+    height:3px;
+    width:100%;
+    background: red;
+    border-radius: 1px;
+    opacity:1;
+    left:0;
+    transform: rotate(0deg);
+    transition:.25s ease-in-out
+}
+.middle-bar{
+    margin-top:0px;
+}
+/*WHEN BUTTON IS CLICKED*/
+.navbar-toggler .top-bar{
+    margin-top: 0px;
+    transform: rotate(135deg);
+}
+
+.navbar-toggler .middle-bar{
+    opacity:0;
+    filter:alpha(opacity = 0);
+}
+.navbar-toggler .bottom-bar{
+    margin-top: 0px;
+    transform: rotate(-135deg);
+}
+
+/*WHEN THE NAVBAR IS COLLAPSED*/
+.navbar-toggler.collapsed .top-bar{
+    margin-top:-20px;
+    transform:rotate(0deg);
+}
+.navbar-toggler.collapsed .middle-bar{
+    opacity: 1;
+    filter:alpha(opacity = 100);
+}
+.navbar-toggler.collapsed .bottom-bar{
+    margin-top:20px;
+    transform:rotate(0deg);
+}
+
+.navbar-toggler.collapsed .toggler-icon{
+    background:black;
+}
+
+/*//HAMBURGER STYLE*/
+
+/*//PRIMARY NAVIGATION*/
+
+/* .offers-container{
+    margin: 2% 10%;
+    
+} */
+/*OUR OFFERS*/
+
+.offers-container{
+    margin: 3% 0;
+}
+.offers-container h1 {
+    text-align: center;
+}
+.service-column{
+    margin-top: 3%;
+}
+.service-column img{
+    border-radius: 8px;
+    width:100%;
+    height:auto;
+}
+
+.france{
+    color:#01bafd;
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/*//OUR OFFERS*/
+.service-container{
+    background-image: url(/images/blue-backgroun.jpg);
+    height:auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 5rem 0;
+    color: white;
+}
+.service-container h2{
+    text-align: center;
+    margin-bottom: 2%;
+}
+.service-inner-container{
+    margin-left: auto;
+    margin-right: auto;
+    width:90%;
+}
+.our-service-column{
+   color:white;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*COUNTER*/
+
+.counter-container{
+    /* display: grid;
+    grid-template-columns: repeat(4, 350px); */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(/images/white-background.jpg);
+    height:auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:8rem;
+    margin-top: 2%;
+    color:#3fb6e1;
+    
+}
+.language-counter{
+    text-align: center;
+}
+.language-counter h5{
+    font-size: 1rem;
+}
+.counter{
+    font-size: 2.2rem;
+    font-family: "mitr", "Montserrat", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+.icons{
+    font-size: 2.5rem;
+}
+@media screen and (max-width:768px) {
+    .counter-container{
+        flex-direction: column;
+    }
+    .language-counter{
+        padding: 1rem 0;
+    }
+}
+/*//COUNTER*/
+.testimony-container{
+    padding:3rem;
+    color:gray;
+    
+}
+
+.testimony-container h2{
+    text-align:center;
+    margin:2% 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   
+}
+
+.testimony-inner{
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    text-align: center;
+    border-radius: 5px;
+    padding: 4rem;
+    
+}
+
+.testimony-inner img{
+    border-radius: 50%;
+    height: 100px;
+    width:100px;
+   margin:auto;
+   display:block;
+}
+.testimony-inner h5{
+    margin-top: 2%;;
+}
+.testimony-inner p{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 2%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: gray;
+}
+
+/*//testimony*/
+
+/*first footer*/
+.first-footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color:#3fb6e1;
+    padding:5rem;
+}
+.first-footer button{
+    padding:12px 22px;
+    border:2px solid white;
+    color: white;
+    background-color: transparent;
+    border-radius: 25px;
+}
+.first-footer h5{
+    color:white;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    background-color: #24262b;
+    color: white;
+}
+.copyright, .social-link{
+    margin-top: 2%;
+}
+.social-link a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(225, 225, 225, 0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+.social-link a:hover{
+    color:#24262b;
+    background-color: #ffffff;
+}
+@media screen and (max-width:768px) {
+    .first-footer, .footer-container{
+        flex-direction: column;
+        text-align: center;
+    }
+}
